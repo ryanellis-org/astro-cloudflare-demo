@@ -1,7 +1,7 @@
 version: v2.0
 provider: cloudflare
 routes:
-# When adding a new route, always add to the bottom of the routes list and follow these instructions to prevent downtime: https://docs.thgaltitude.com/reference/file-based-configuration/v2-1/#adding-a-new-route
+  # When adding a new route, always add to the bottom of the routes list and follow these instructions to prevent downtime: https://docs.thgaltitude.com/reference/file-based-configuration/v2-1/#adding-a-new-route
   - pathPrefix: /
     name: ssr
     type: function
@@ -11,7 +11,6 @@ routes:
       output:
         directory: dist
         filename: _worker.js
-        staticDirectory: ssr-assets
   - pathPrefix: favicon.svg
     name: favicon
     type: static
