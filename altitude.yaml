@@ -1,30 +1,19 @@
 version: v2.0
 provider: cloudflare
 routes:
-    - pathPrefix: /
-      name: ssr
-      type: function
-      directory: .
-      build:
-          command: build
-          output:
-              directory: dist
-              filename: _worker.js
-              staticDirectory: ssr-assets
-      cache:
-        headers:
-          - "x-altitude-instance"
-    - pathPrefix: favicon.ico
-      name: favicon
-      type: static
-      directory: public
-      filename: favicon.ico
-    - pathPrefix: robots.txt
-      name: robots
-      type: static
-      directory: public
-      filename: robots.txt
-    - pathPrefix: /account
-      name: account-proxy
-      type: proxy
-      url: ${{ACCOUNT_PROXY_URL}}
+# When adding a new route, always add to the bottom of the routes list and follow these instructions to prevent downtime: https://docs.thgaltitude.com/reference/file-based-configuration/v2-1/#adding-a-new-route
+  - pathPrefix: /
+    name: ssr
+    type: function
+    directory: .
+    build:
+      command: build
+      output:
+        directory: dist
+        filename: _worker.js
+        staticDirectory: ssr-assets
+  - pathPrefix: favicon.svg
+    name: favicon
+    type: static
+    directory: public
+    filename: favicon.svg

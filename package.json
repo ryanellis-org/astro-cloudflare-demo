@@ -1,23 +1,19 @@
 {
-  "name": "",
+  "name": "astro-basic-starter",
   "type": "module",
   "version": "0.0.1",
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
     "build": "astro build",
-    "preview": "astro preview",
-    "preview:astro": "wrangler pages dev ./dist --port 8787",
+    "preview": "wrangler pages dev ./dist",
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/cloudflare": "^7.1.1",
-    "@astrojs/mdx": "^1.1.0",
-    "@astrojs/rss": "^3.0.0",
-    "@astrojs/sitemap": "^3.0.0",
-    "astro": "^3.1.1"
+    "@astrojs/cloudflare": "^9.0.0",
+    "astro": "^4.3.5"
   },
   "devDependencies": {
-    "wrangler": "^3.9.0"
+    "wrangler": "^3.27.0"
   }
 }
